@@ -1,0 +1,70 @@
+@mixin animation {
+    animation-name: animacao-jedi;
+    animation-duration:90s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    
+    @keyframes animacao-jedi {
+        0% {
+            transform: translateY(50%) ;
+           
+            
+        }
+        100% {
+            transform: translateY(-200%) ;
+            opacity: 0;
+        }
+    }
+
+}
+
+
+@mixin space {
+    animation-name: space;
+    animation-iteration-count: infinite;
+    animation-duration: 110s;
+    animation-direction: alternate;
+    @content;
+    @keyframes space {
+        to {
+            background-position: 0 50%;
+        }
+        from {
+           background-position: 100% 50%;
+        }
+        
+    }
+}
+
+
+@mixin animation-text-yoda {
+    animation-name: yoda;
+    animation-duration: 20s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+
+    @keyframes yoda {
+        from {
+            transform:rotatex(360deg) rotateY(40deg) rotateZ(-25deg) scale(1) translateX(0) translateY(20%);
+        }
+        to {
+            transform:rotatex(-360deg) rotateY(-40deg) rotateZ(25deg) scale(1.3) translateX(-20%) translateY(-20%);
+        }
+       
+    }
+}
+
+
+@mixin animation-yoda--992px {
+    animation-name: yoda2;
+    animation-duration: 10s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    @keyframes yoda2 {
+        to {
+            transform:rotatex(180deg) rotateZ(180deg) scale(1.3) ;
+        }
+    }
+}

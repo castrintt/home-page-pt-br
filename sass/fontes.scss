@@ -1,0 +1,15 @@
+@mixin fonte {
+    font-family: $star-wars;
+    color: rgba(209, 160, 68, 0.801);
+    letter-spacing: 1px;
+    @content
+}
+/*------- fonts ------------*/
+
+
+$star-wars: "starjedi";
+
+$font-texto-padrao:'Poller One', "cursive";
+
+$font-text-sobre:'Oswald', sans-serif;
+$font-text-sobre-alternativa:'Roboto Condensed', sans-serif;

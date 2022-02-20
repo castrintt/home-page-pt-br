@@ -1,0 +1,231 @@
+@import "color","fontes","animation","media-queries";
+@font-face {
+    font-family: "starjedi";
+    src: url("/fonts/starjedi/Starjhol.ttf");
+  }
+  @import url('https://fonts.googleapis.com/css2?family=Poller+One&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Oswald&family=Roboto+Condensed:ital@1&display=swap');
+
+
+body {
+    font-family: $star-wars;
+    color: rgba(255, 166, 0, 0.747);
+    background-image: url("/img/fundo.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center center;
+    @include space;
+    @include queries(968px){
+        background-size: 150% 150%;
+    }
+    .header__container {
+      .header__titulo {
+          text-align: center;
+      }
+       padding-bottom: 20px;
+       a {
+        @include fonte {
+            text-decoration: none;
+            font-size: 0.9rem;
+            text-decoration: none;
+            padding-bottom: 30px;
+            margin-top: 10px;
+            text-align: center;
+            border-bottom: 1px solid $color-text;
+            @include queries (340px){
+                font-size: .7rem;
+            }
+            @include queries (768px){
+                font-size: 1.4rem;
+
+            }
+            @include queries (1440px){
+                font-size: 1.6rem;
+            }
+        }
+      
+     }
+    }
+    .sobre {
+       border-bottom: 1px solid $color-text;
+       padding-bottom: 20px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        &__row--titulo {
+            @include fonte {
+                text-align: center;
+                margin-bottom: 20px;
+                text-shadow: 3px 3px 10px rgba(255, 255, 255, 0.308);
+                padding-top:10px ;
+                
+            }
+        
+        }
+        &__row--texto {
+            @include fonte {
+                font-size: 1.09rem;
+                text-align: justify;
+                font-family: $font-texto-padrao;
+                color: white;
+                letter-spacing: 0;
+                overflow: hidden;
+                height: 40vh;
+                
+                .row__texto {
+                    @include animation;
+                    width: 60%;
+                    text-align: justify;
+                    position: relative;
+                    left: 20%;
+                    transform: translate(-50%);
+                    text-transform: uppercase;
+                    font-family: $font-text-sobre;
+                    @include queries (768px){
+                        font-size: 2rem;
+                        text-align: justify;
+                    }
+                    
+                }
+            
+                
+            }
+        }
+       
+        }
+        .projetos {
+            width: 90%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            .projetos__titulo {
+                text-align: center;
+                margin: 50px 0;
+            }
+            .slide {
+             width: 100%;
+             .img__carousel {
+                 backdrop-filter: blur(20px);
+             }
+            }
+        }
+
+        .contato {
+            text-align: center;
+            .contato__titulo {
+                font-size: 1.8rem;
+                border-top: 1px solid $color-text;
+                padding-top: 70px;
+                @include queries (768px){
+                    font-size: 2rem;
+                }
+            }
+            .contato__row{
+                .contato__row--texto {
+                    position: relative;
+                    top: -320px;
+                    left: 40%;
+                    transform: translate(-50%);
+                    width:200px;
+                    @include animation-text-yoda;
+                    font-size: 1.2rem;
+                    font-weight: 700;
+                    color: white;
+                    @include queries (768px){
+                        top: -550px;
+                        left: 50%;
+                        font-size: 1.5rem;
+                        width: 300px;
+                    }
+                    @include queries (992px){
+                        top: -700px;
+                        font-size: 2.3rem;
+                    }
+                    @include queries (1200px){
+                        top: 350px;
+                        left: 0;
+                        @include animation-yoda--992px;
+                        width: 400px;
+                    }
+                    
+                }
+                .contato__row--img {
+                   max-width: 100%;
+                   @include queries (1200px){
+                       height: 100%;
+                       width: 50vw;
+                       
+                   }
+
+                }
+    
+                 
+            }
+        .contato__info {
+            border-bottom: 1px solid $color-text;
+            .contato__icone {
+                text-align: center;
+                font-size: 2rem;
+                
+                a {
+                    text-decoration: none;
+                    color: $color-text;
+                    @include queries (768px){
+                        font-size: 2rem;
+                    }
+                }
+            }
+            .bi-linkedin {
+                                
+                @include queries (768px){
+                    font-size: 3rem;
+                }
+
+            }
+            .bi-github {
+                font-size: 2.3rem;
+                
+                @include queries (768px){
+                    font-size: 3.5rem;
+                }
+
+              
+            }
+            .email__text--div {
+                @include queries (768px){
+                    font-size: 1.5rem;
+                }
+            }
+        .email__text--email {
+            color: white;
+            font-family: $font-text-sobre;
+            text-transform: uppercase;
+            font-size: 1.3rem;
+            @include queries (768px){
+                font-size: 2rem;
+            }
+        }
+        }
+        
+        }
+    .footer__container {
+        .footer__titulo {
+            text-align: center;
+            font-size: 1.2rem;
+            @include queries (768px){
+                font-size: 1.3rem;
+            }
+        }
+        .footer__texto {
+            text-align: center;
+            font-size: .9rem;
+                @include queries (768px){
+                    font-size: 1.1rem;
+                }
+
+        }   
+        
+    }
+       
+}
